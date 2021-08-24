@@ -1,0 +1,29 @@
+/*imperative program*/void main() {
+  sammleAllesEin();  
+  renneBisZurMauerInvertiere();    
+  invertiere(); 
+}
+
+// Hamster Standard Bewegungen
+// --------------------------------------------------------------------------------------------------
+void sammleAllesEin() {
+ while (kornDa()) {
+  nimm();  
+ }
+}  // eom
+
+void renneBisZurMauerInvertiere() {
+    while (vornFrei()) {
+     invertiere();
+     vor();  
+  }
+} // eom
+
+void invertiere() {
+ if (!kornDa()) {
+  gib();
+ } // eoif
+ else {
+  nimm();
+ } // eoelse
+}

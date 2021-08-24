@@ -1,0 +1,19 @@
+/*imperative program*/int feldNummer;
+void main() {	
+   feldNummer = liesZahl("Gib eine Feldnummer ein auf welcher der Hamster essen darf :");  
+   if (feldNummer > 10) {
+    schreib("Nummer ist größer als 10");
+    return;
+   }  
+   vorAnz(feldNummer);  
+   nimm();
+}
+
+
+// Hamster Standard Bewegungen
+// -----------------------------------------------------------------------------------------------------
+void vorAnz (int schritte) {
+  for (int i=1; i<=schritte;i++) {
+   vor();
+  }
+}

@@ -1,0 +1,29 @@
+/*imperative program*/void main() {
+  sammleAllesEin();
+  gib();
+  for (int i= 1; i <= 4;i++) {
+  renneBisZurMauer();
+  linksUm();
+  legeKornBeiBedarf();
+  } // eoif       
+} // eoMain
+
+// Hamster Standard Bewegungen
+// --------------------------------------------------------------------------------------------------
+void sammleAllesEin() {
+ while (kornDa()) {
+  nimm();  
+ }
+}  // eom
+
+void renneBisZurMauer() {
+    while (vornFrei()) {
+    vor();  
+  }
+} // eom
+
+void legeKornBeiBedarf() {
+ if (!kornDa()) {
+  gib();
+ } // eoif
+}
