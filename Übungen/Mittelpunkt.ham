@@ -1,0 +1,53 @@
+/*imperative program*/int anzVertikal = 0;
+int anzHorizontal = 0;
+void main() {
+  
+  anzVertikal = renneBisEndeMerkeFeldAnzahlVertikal();
+  linksUm();
+  anzHorizontal = renneBisEndeMerkeFeldAnzahlHorizontal();    
+  umdrehen();
+  renneZurMitte(anzHorizontal/2);
+  rechtsUm();
+  renneZurMitte(anzVertikal/2);
+}
+
+int renneBisEndeMerkeFeldAnzahlVertikal() {
+ int j = 0;
+ while (vornFrei()) {
+  vor();
+  j++;
+ }
+ return j;
+}
+
+int renneBisEndeMerkeFeldAnzahlHorizontal() {
+int k = 0;
+ while (vornFrei()) {
+  vor();
+  k++;
+ }
+ return k;
+}
+
+void renneZurMitte (int l) {
+  for (int i=1; i<=l;i++) {
+     vor();
+  } 
+}
+
+
+// -----------------------------------------------
+
+
+void umdrehen() { 
+  for (int i=1; i<=2;i++) {
+   linksUm();
+  }
+}
+
+
+void rechtsUm() { 
+  for (int i=1; i<=3;i++) {
+   linksUm();
+  }
+}

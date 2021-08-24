@@ -1,0 +1,13 @@
+/*imperative program*/void main() {
+  omNomNom();
+  while (!maulLeer()) {
+    gib();
+    vor();      
+  } //eow    
+}
+
+void omNomNom () {
+ while (kornDa()) {
+  nimm();  
+ }
+}

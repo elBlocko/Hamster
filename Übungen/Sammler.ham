@@ -1,0 +1,20 @@
+/*imperative program*/void main() {
+ while (vornFrei()) {
+  rennBisKornAufFeld();
+  sammleAllesEin();
+ }   
+}  // eoMain
+
+
+void  rennBisKornAufFeld() {
+  while (!kornDa()) {
+    vor();  
+  }
+}
+ // eom  
+
+void sammleAllesEin() {
+ while (kornDa()) {
+  nimm();  
+ }
+}  // eom

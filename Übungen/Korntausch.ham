@@ -1,0 +1,49 @@
+/*imperative program*/void main() {
+ fuellDieBacken();
+ rennAnsEnde();
+ gehEinFeldZurueck();
+ entleereDieBacken();
+ rennAnsEnde();
+ fuellDieBacken();
+ umdrehen();
+ rennAnsEnde();
+ entleereDieBacken();
+ umdrehen();
+ rennAnsEnde();
+ gehEinFeldZurueck();
+ fuellDieBacken();
+ rennAnsEnde();
+ entleereDieBacken();    
+}
+
+void fuellDieBacken(){
+ while (kornDa()) {
+  nimm();  
+ }
+} //eom
+void rennAnsEnde(){
+  while (vornFrei()) {
+  vor();  
+ }
+}  //eom
+
+void gehEinFeldZurueck(){
+ umdrehen();
+ vor();
+ umdrehen(); 
+}  //eom
+
+void entleereDieBacken(){
+ while (!maulLeer()) {
+  gib();  
+ }
+} //eom
+
+void umdrehen(){
+ int i = 0;
+ while (i != 2) {
+  linksUm();
+  i++;
+ } 
+} //eom
+

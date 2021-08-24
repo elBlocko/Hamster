@@ -1,0 +1,32 @@
+/*imperative program*/void main() {
+ 
+ findeEinKorn();
+  
+    
+}
+
+
+void findeEinKorn() {
+// Hamster steht schon auf Korn
+ if (kornDa()) {
+ nimm();
+ return;
+ }
+// Hamster steht nicht auf Korn
+ gehZurWand(); 
+ linksUm();
+ gehZurWand();  
+}
+ 
+
+void gehZurWand() {
+// Renn bis zur wand, wenn Korn da 
+ while (vornFrei()) {
+ vor();
+ if (kornDa()) {
+ nimm();
+ return; 
+ //ende if
+ } 
+ }// ende while
+}

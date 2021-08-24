@@ -1,0 +1,21 @@
+/*imperative program*/void main() {
+  int kornAnz = 0;
+  kornAnz = omNomNom(); 
+  vorAnz(kornAnz);  
+}
+
+
+int omNomNom () {
+ int k = 0;
+ while (kornDa()) {
+  nimm();  
+  k++;
+ } // eow
+ return k;
+}
+
+void vorAnz (int schritte) {
+  for (int i=1; i<=schritte;i++) {
+   vor();
+  }
+}

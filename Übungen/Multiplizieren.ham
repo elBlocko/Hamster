@@ -1,0 +1,15 @@
+/*imperative program*/int multiplikant,multiplikator,c = 0;
+void main() {
+ multiplikant = liesZahl("Gib die erste Zahl ein :"); 
+ multiplikator = liesZahl("Gib die zweite Zahl ein :");  
+ schreib("Die Zahl: " + gibErg());    
+}
+// 2*5 = 2+2+2+2+2
+int gibErg() { 
+ int i = 0;
+ while (i < multiplikator){
+  c += multiplikant; 
+  i++;
+ }
+ return c;
+}

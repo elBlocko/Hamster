@@ -1,0 +1,54 @@
+/*imperative program*/void main() {
+   renneBisKoerner();
+   nimmAlleKoernerAuf(); 
+   gehInDenBau();
+   umdrehen();
+   legeKoernerAb();
+}
+
+
+
+
+// Hamster Moves
+// -----------------------------------------------------------------------------------------------------
+void umdrehen() { 
+ int i = 0;
+ while (i != 2) {
+  linksUm();
+  i++;
+ } 
+}
+
+void renneBisKoerner() {
+ int i = 0;
+ while (i != 5) {
+  vor();
+  i++;
+ } 
+}
+
+void nimmAlleKoernerAuf() {
+ int i = 0;
+ while (i != 9) {
+ nimm();
+ i++;
+ } 
+}
+
+ void gehInDenBau() { 
+ int i = 0;
+ while (i != 3) {
+  vor();
+  i++;
+ }  
+ }
+ 
+ void legeKoernerAb() {
+ 
+  int i = 0;
+ while (i != 9) {
+  gib();
+  i++;
+ } 
+ 
+ }

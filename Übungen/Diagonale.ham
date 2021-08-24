@@ -1,0 +1,95 @@
+/*imperative program*/void main() {
+ renneAuﬂenkreisVerteileVier();
+ gehZumInnerenKreis();
+ renneInnerenKreisVerteileVier();
+ gehZurMitte();  
+ legeLetztesKornGehZurEndPosition();   
+}
+
+// -----------------------------------------------------------------------------------------------------
+void rechtsUm() {
+ linksUm();
+ linksUm();
+ linksUm();
+}
+
+
+void umdrehen() { 
+ linksUm();
+ linksUm(); 
+}
+
+
+// -----------------------------------------------------------------------------------------------------
+
+void renneAuﬂenkreisVerteileVier() {
+ linksUm();
+ gib();
+ renneVierFelder();
+ gib();
+ rechtsUm();
+ renneVierFelder();
+ gib();
+ rechtsUm();
+ renneVierFelder();
+ gib();
+ rechtsUm();
+}
+
+void renneInnerenKreisVerteileVier() {
+ gib();
+ renneZweiFelder();
+ rechtsUm();
+ gib();
+ renneZweiFelder();
+ rechtsUm();
+ gib();
+ renneZweiFelder();
+ rechtsUm();
+ gib();
+}
+
+
+
+void gehZumInnerenKreis() {
+ renneDreiFelder();
+ rechtsUm();
+ vor();
+}
+
+void gehZurMitte() {
+ 
+ vor();
+ rechtsUm();
+ vor();
+}
+
+void legeLetztesKornGehZurEndPosition() {
+ gib();
+ rechtsUm();
+ renneZweiFelder();
+ rechtsUm();
+ vor();
+ umdrehen();
+}
+
+void renneVierFelder() {
+ vor();
+ vor();
+ vor();
+ vor(); 
+}
+
+void renneDreiFelder() {
+ vor();
+ vor();
+ vor();
+ 
+}
+
+void renneZweiFelder() {
+ vor();
+ vor();
+
+}
+

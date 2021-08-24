@@ -1,0 +1,33 @@
+/*imperative program*/void main() {
+ 
+vor();
+stufeHochsteigen();
+stufeHochsteigen();
+nimm();
+stufeHochsteigen();
+stufeHochsteigen();
+umdrehen();
+}
+
+
+// -----------------------------------------------------------------------------------------------------
+void rechtsUm() {
+ linksUm();
+ linksUm();
+ linksUm();
+}
+
+
+void umdrehen() { 
+ linksUm();
+ linksUm(); 
+}
+
+void stufeHochsteigen(){
+
+linksUm();
+vor();
+rechtsUm();
+vor();
+
+}

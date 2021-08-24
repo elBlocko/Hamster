@@ -1,0 +1,92 @@
+/*imperative program*/int kornAnz = 0;
+int felderHoch = 0;
+int gerannterWeg = 0;
+int wegZurMitte = 0;
+// --------------------------------------------------------------------------------------------
+void main() {
+ 
+ 
+   
+  renneBisEndeSammleAllesEin();
+  felderHoch = renneHochLegeHaelfteAb();
+  gerannterWeg = renneRunterLegeRestAb();
+  wegZurMitte = gerannterWeg - felderHoch;
+  renneInDieMitte(wegZurMitte);  
+} // eoMain
+
+void renneBisEndeSammleAllesEin() { 
+ while (vornFrei()) {
+  rennBisKornAufFeld();
+  kornAnz += sammleAllesEin();
+ }  // eow  
+}
+ // eom
+
+
+int renneHochLegeHaelfteAb() {
+ int l = 0;
+ linksUm();
+  while (vornFrei()) {
+   vor();
+   l++;
+}  
+  gibAnz(kornAnz/2); 
+  umdrehen();   
+  return l;
+}
+
+
+int  renneRunterLegeRestAb(){
+  int j = 0;
+  while (vornFrei()) {
+   vor();
+   j++;
+  }
+  gibAnz(kornAnz/2);  
+  umdrehen();
+  return j;
+ } 
+
+ 
+void renneInDieMitte(int w) {
+   for (int i=1; i<=w;i++) {
+     vor();
+  } 
+  linksUm();
+}
+
+// -------------------------------------------------------------------------------------------------------
+
+void rennBisKornAufFeld() {
+  while (!kornDa()) {
+   if (vornFrei()) {
+     vor();  
+     } //eoif
+    else break; 
+  }
+}
+ // eom
+
+int sammleAllesEin() {
+ int k = 0;
+  while (kornDa()) {
+   nimm();  
+   k++;
+  } // eow
+ return k;
+} // eom
+
+
+void gibAnz(int Anz) {  
+   for (int i=1; i<=Anz;i++) {
+     gib();
+  } 
+}
+
+void umdrehen() { 
+  for (int i=1; i<=2;i++) {
+   linksUm();
+  }
+}
+
+

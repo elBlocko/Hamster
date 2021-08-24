@@ -1,0 +1,5 @@
+/*imperative program*/int n = 0;
+void main() {
+  n = liesZahl("Gib eine Zahl ein");
+  schreib("Der Nachfolger ist :" + (n+1));  
+}

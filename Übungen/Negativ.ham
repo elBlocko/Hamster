@@ -1,0 +1,16 @@
+/*imperative program*/int n = 0;
+void main() {
+ n = liesZahl("Gib deine Zahl ein :"); 
+ schreib("Die Zahl: " + n + gibStr());   
+}
+
+String gibStr() {
+ String Ergebnis = "";
+ if (n >= 0) {
+  Ergebnis = " ist eine positive Zahl";
+ } else {
+  Ergebnis = " ist eine negative Zahl";
+ }
+ return Ergebnis;
+}
+

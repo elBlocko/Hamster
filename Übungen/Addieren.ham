@@ -1,0 +1,13 @@
+/*imperative program*/int n,m = 0;
+
+void main() {
+ n = liesZahl("Gib die erste Zahl ein :"); 
+ schreib("Das Ergebnis ist: " + gibErg());    
+}
+
+int gibErg() { 
+ for (int i=1; i<=n;i++) {
+   m += i; 
+  } 
+ return m;
+}

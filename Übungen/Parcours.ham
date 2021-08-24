@@ -1,0 +1,38 @@
+/*imperative program*/void main() {
+  
+  while (!kornDa()) {
+    renneBisZurMauer();
+    springUeberDieMauer();
+  } 
+ nimm();    
+}
+
+void renneBisZurMauer() {
+    while (vornFrei()) {
+    vor();  
+  }
+}
+
+void springUeberDieMauer() {
+ linksUm();
+ vor();
+ rechtsUm();
+ vorAnz(2);
+ rechtsUm();
+ vor();
+ linksUm();
+}
+
+// Hamster Standard Bewegungen
+// -----------------------------------------------------------------------------------------------------
+void rechtsUm() {
+ for (int i=1; i<=3;i++) {
+   linksUm();
+  }
+}
+
+void vorAnz (int schritte) {
+  for (int i=1; i<=schritte;i++) {
+   vor();
+  }
+}

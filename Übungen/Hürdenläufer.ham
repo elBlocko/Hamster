@@ -1,0 +1,49 @@
+/*imperative program*/void main() {
+ 
+ rennZumEnde ();
+ nimm();
+ umdrehen();
+ 
+}
+
+// Blick geradeaus vor der Mauer bis nach der Mauer
+void springe() {
+ linksUm();
+ vor();
+ rechtsUm();
+ vor();
+ vor();
+ rechtsUm();
+ vor();
+ linksUm();
+}
+
+
+// geh bis zur Mauer und spring drüber
+void nimmHürde() {
+ vor();  
+ vor();    
+ springe();
+}
+
+void rennZumEnde () {
+ nimmHürde();
+ nimmHürde();
+ nimmHürde();
+ nimmHürde();
+ nimmHürde();
+}
+
+
+// -----------------------------------------------------------------------------------------------------
+void rechtsUm() {
+ linksUm();
+ linksUm();
+ linksUm();
+}
+
+
+void umdrehen() { 
+ linksUm();
+ linksUm(); 
+}

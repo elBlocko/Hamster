@@ -1,0 +1,6 @@
+/*imperative program*/float n,m = 0;
+void main() {
+ n = liesZahl("Gib die erste Zahl ein :"); 
+ m = liesZahl("Gib die zweite Zahl ein :");
+ schreib("Der Mittelwert ist: " + ((m+n)/2));   
+}
