@@ -1,8 +1,11 @@
 /*imperative program*/int n,m;
 void main() {
  n = liesZahl("Gib die erste Zahl ein :"); 
- m = liesZahl("Gib die zweite Zahl ein :");
- 
+ m = liesZahl("Gib die zweite Zahl ein :"); 
+ if (m == 0) {
+  schreib("geht ni durch null");
+  return;
+ }
  if (n%m == 0) {
   schreib(m + " ist Teiler von " + n);
  } 

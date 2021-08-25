@@ -1,3 +1,22 @@
 /*imperative program*/void main() {
-    
+int zahl = 0;
+zahl = liesZahl("Gib die erste Zahl ein :");    
+if (istPrimzahl(zahl) == true) {
+ schreib("Es ist eine Primzahl ");
+} // eoif
+ else {
+schreib("Es ist eine Primzahl ");
+ } // eoelse
 }
+
+
+boolean istPrimzahl(int zahl) { 
+            boolean primi = true;
+             for (int i = 2; i < zahl; i++) {
+                    if ((zahl % i) == 0) {
+                           primi = false;
+                           break;
+                    }
+             }
+             return primi;
+       }
