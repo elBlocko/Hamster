@@ -1,21 +1,24 @@
 /*imperative program*/void main() {
-  int anz = 0;
-  int n = 0;
+  int anz = 0; // Eingabe
+  int n = 0; // gezählte Körner
   while (!kornDa()) {
    vor();
-  }
+  } // geh bis Körner
   while (kornDa()) {   
    nimm();
    n++;
-  }
+  } // nimm alle Körner und Zähle
   while (!maulLeer()) {
    gib();
-  }
+  } // spuck alle Körner aus
   anz  = liesZahl("Anzahl Körner zum Aufnehmen (max 10) : ");
+   // Prüfung ob Eingabe größer als gezählte Körner
+   // Schleife bis Eingabe korrekt
    while (anz > n) { 
     schreib("Zahl darf nicht größer als 10 sein");
-    anz = liesZahl("Anzahl Felder nach Oben : "); 
+    anz = liesZahl("Anzahl Körner zum Aufnehmen (max 10) : "); 
    }
+  
   nimmN(anz);
   vor(); 
   while(vornFrei())  {
