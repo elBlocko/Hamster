@@ -1,3 +1,42 @@
 /*imperative program*/void main() {
-    
+ while ((!kornDa()) && (vornFrei())) {
+  vor(); 
+  if (!vornFrei()) {
+    if (istLinksMauer()) {
+      rechtsUm();         
+    } // eoif1      
+  } // eoif2
+ } // eow  
+ nimm();    
+} //eoMain
+
+boolean istLinksMauer() {
+ linksUm();
+ if (!vornFrei()) {
+  rechtsUm();
+  return true;
+ } // eoif
+  else {
+  return false;
+ } // eoelse
+ 
+}
+
+/*
+boolean istReechtsMauer() {
+ rechtsUm();
+ if (!vornFrei()) {
+  return = true;
+ } else {
+  return = false;
+ }
+ linksUm();
+}
+*/
+
+
+void rechtsUm() {
+  linksUm();
+  linksUm();
+  linksUm();  
 }
