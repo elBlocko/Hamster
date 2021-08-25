@@ -1,0 +1,20 @@
+/*imperative program*/int n,m, abstand = 0;
+void main() {
+ n = liesZahl("Gib die erste Zahl ein :"); 
+ m = liesZahl("Gib die zweite Zahl ein :");
+ berechneAbstand();
+ if (abstand < 0) {
+  abstand = abstand * (-1);
+ } // eoif   
+ schreib("Der Abstand ist " + abstand);
+}
+
+int berechneAbstand() {
+ if (n > m) {
+  abstand = (n - m);      
+ } 
+ if (n < m) {
+  abstand = (m - n);     
+ }
+ return abstand;  
+} // eom
