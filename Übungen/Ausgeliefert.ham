@@ -1,3 +1,32 @@
 /*imperative program*/void main() {
-    
+  int anz = 0;
+  int n = 0;
+  while (!kornDa()) {
+   vor();
+  }
+  while (kornDa()) {   
+   nimm();
+   n++;
+  }
+  while (!maulLeer()) {
+   gib();
+  }
+  anz  = liesZahl("Anzahl Körner zum Aufnehmen (max 10) : ");
+   while (anz > n) { 
+    schreib("Zahl darf nicht größer als 10 sein");
+    anz = liesZahl("Anzahl Felder nach Oben : "); 
+   }
+  nimmN(anz);
+  vor(); 
+  while(vornFrei())  {
+   vor();
+  } 
+}
+
+// METHODEN ----------------------------------------
+
+void nimmN (int N) {
+ for (int i = 1; i<= N; i++) {
+  nimm();
+ } 
 }

@@ -1,3 +1,19 @@
 /*imperative program*/void main() {
-    
+ int k= 0;
+ while (kornDa()) {
+  nimm();
+  vor();
+  k++;
+ }   
+ while (vornFrei()) {
+  vor();
+ }
+ gibN(k/2);
+}
+
+
+void gibN (int N) {
+ for (int i = 1; i <= N; i++) {
+ gib();
+ }
 }
