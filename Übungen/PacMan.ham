@@ -1,0 +1,46 @@
+/*imperative program*/void main() {
+ while (vornFrei()) {
+  frissEineReiheGerade();  
+  schrittZurueck();
+  findeKorn();  
+  }
+ nimm();  
+} //eoMain
+
+void rechtsUm() {
+ linksUm();
+ linksUm();
+ linksUm();  
+} 
+ 
+void schrittZurueck() {
+ linksUm();
+ linksUm();
+ vor();
+ linksUm();
+ linksUm();
+} 
+
+void frissEineReiheGerade() {
+ while (vornFrei() && (kornDa())) {
+     nimm();
+     vor();      
+    } // eow
+} // eom
+
+void  dreheBisVornFrei() {
+while (!vornFrei()) {
+   linksUm(); 
+  } // eow 
+}
+
+void findeKorn() {
+ while (!kornDa()) {
+  vor();
+  if (kornDa()) {
+   return;
+  } 
+  schrittZurueck();
+  linksUm();
+ } // eow
+}

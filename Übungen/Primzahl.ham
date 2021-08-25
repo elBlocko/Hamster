@@ -11,12 +11,12 @@ schreib("Es ist eine Primzahl ");
 
 
 boolean istPrimzahl(int zahl) { 
-            boolean primi = true;
-             for (int i = 2; i < zahl; i++) {
-                    if ((zahl % i) == 0) {
-                           primi = false;
-                           break;
-                    }
-             }
-             return primi;
+     boolean primi = true;
+       for (int i = 2; i < zahl; i++) {
+        if ((zahl % i) == 0) {
+         primi = false;
+         break;
        }
+      }
+  return primi;
+}

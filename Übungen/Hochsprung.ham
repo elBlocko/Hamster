@@ -1,0 +1,35 @@
+/*imperative program*/void main() {
+ renneBisWand();
+ renneBisRechtsFrei();
+ vor();
+ vor();
+ rechtsUm();
+ renneBisWand();
+ linksUm();
+ renneBisWand(); 
+}
+
+
+void renneBisRechtsFrei() {  
+  while (!vornFrei()) {
+   linksUm();
+   vor(); 
+   rechtsUm();  
+ }
+}
+
+
+void rechtsUm() {
+ linksUm();
+ linksUm();
+ linksUm(); 
+}
+
+void renneBisWand() {
+
+ while (vornFrei()) {
+  vor();
+ } // eow
+
+
+}

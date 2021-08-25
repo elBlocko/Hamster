@@ -1,0 +1,14 @@
+/*imperative program*/void main() {
+ for (int i = 1; i <=4;i++) {
+  while (vornFrei()) {
+   if (!kornDa()) {
+    vor();
+   } // eoif
+   else {
+    nimm();
+    vor(); // ohne vor(); sammelt alles ein
+   } // eoelse
+  } //eow  
+   linksUm();   
+ } // eofor    
+}
