@@ -1,0 +1,76 @@
+/*imperative program*/void main() { 
+ while (vornFrei()) { // renne die Hauptgerade bis ans ende
+  boolean li = istLinksMauer();  
+  boolean re = istRechtsMauer();
+  if ((li)&&(re)) {
+   vor();  // solange rechts und links Mauer, geh weiter
+   } // eoif 
+  else {
+   if (!li) { // links ist frei, renn den ´Gang hoch und runter, geh weiter
+     linksUm();  
+     while (vornFrei()) {
+      vor();
+    } // eow
+     umdrehen();  
+     while (vornFrei()) {
+      vor();
+    } // eow
+    linksUm();  
+    vor();   
+   } // eoif  
+   if (!re) { // rechts ist frei, renn den ´Gang hoch und runter, geh weiter
+     rechtsUm();  
+     while (vornFrei()) {      
+      vor();
+    } // eow
+     umdrehen();  
+     while (vornFrei()) {
+      vor();
+    } // eow
+    rechtsUm();
+    vor();     
+    } // eoif     
+  } // eoelse  
+ } // eow
+}
+
+// METHODEN -----------------------------
+
+boolean istLinksMauer() {
+ linksUm();
+ if (!vornFrei()) {
+  rechtsUm();
+  return true;
+ } // eoif
+  else {
+  rechtsUm();
+  return false;
+ } // eoelse
+ 
+}
+
+
+boolean istRechtsMauer() {
+ rechtsUm();
+ if (!vornFrei()) {
+  linksUm();
+  return true;  
+ } else {
+  linksUm();
+  return false;
+ }
+}
+
+
+// Hamster MOVES -----------------------
+
+void rechtsUm() {
+  linksUm();
+  linksUm();
+  linksUm();  
+}
+
+void  umdrehen() {
+  linksUm();
+  linksUm(); 
+}
