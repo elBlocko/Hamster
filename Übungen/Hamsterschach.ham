@@ -1,0 +1,26 @@
+/*imperative program*/int r,h = 0;
+void main() { 
+ liesWerte();
+ nVor(r);
+ linksUm();
+ nVor(h); 
+}
+
+void liesWerte() {
+ r = liesZahl("Anzahl Felder nach Rechts : "); 
+ while (r >= 10) {
+  schreib("Zahl darf nicht größer als 9 sein");
+  r = liesZahl("Anzahl Felder nach Rechts : "); 
+ }
+  h = liesZahl("Anzahl Felder nach Oben : ");
+  while (h >= 10) { 
+  schreib("Zahl darf nicht größer als 9 sein");
+ h = liesZahl("Anzahl Felder nach Oben : "); 
+  }
+}
+
+void nVor(int n) {
+ for (int i = 1; i<=n;i++) {
+  vor();
+ }
+}
