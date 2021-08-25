@@ -1,0 +1,24 @@
+/*imperative program*/int n,m = 0;
+
+void main() {
+ n = liesZahl("Gib die erste Zahl ein : "); 
+ m = liesZahl("Gib die zweite Zahl ein : ");
+ ausgabe();
+} // eoMain
+
+// ------------------------------------
+// METHODEN
+void ausgabe() {
+ if (n > m) {
+  schreib(n + " ist größer als " + m); 
+  return;
+ } 
+ if (n < m) {
+  schreib(n + " ist kleiner als " + m); 
+  return;
+ }
+ if (n == m) {
+  schreib(n + " ist gleich als " + m); 
+  return;
+ } 
+} // eom
