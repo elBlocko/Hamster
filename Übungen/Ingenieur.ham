@@ -1,27 +1,36 @@
-/*imperative program*/void main() {
+/*imperative program*/boolean yDiffZaehlen = false;
+int yDiff, xDiff = 0;
+int x1, x2 = 0;
+void main() {
     // renne zeilenweise bis 1. Korn
     // renne zw bis 2. Korn    
     // merke Anzahl gelaufene Felder wenn Korn gefunden
     // merke Anzahl gewechselte Zeilen von Korn 1 bis 2
-  int x1, x2 = 0;
-  int yDiff = 0;
+   
   while (!kornDa()) {
     x1 = scanneZeileNachKorn() +1;    
   }
-  while (!kornDa()) {
-     int b = 0; 
-     b++; 
+  vor();
+  yDiffZaehlen = true;
+  while (!kornDa()) {     
      x2 = scanneZeileNachKorn() +1;    
-  }  
+  } 
+ 
+  if (x1 > x2) {
+   xDiff = x1 - x2;
+  } else {
+   xDiff = x2 - x1;
   
-   
-//  gewZeilen = gehZurNaechstenReihe();
-    
-    
+  }
+ 
+  schreib("y-Differenz ist: " + yDiff + "\n x- Differenz ist:  " + xDiff); 
+  
 }
 
 void gehZurNaechstenReihe() {
-   
+ if (yDiffZaehlen) {
+  yDiff++;
+ }
  rechtsUm();
  vor();
  rechtsUm(); 
@@ -42,7 +51,7 @@ void  umdrehen() {
   linksUm(); 
 }
 
-int scanneZeileNachKorn() {
+int scanneZeileNachKorn() { 
  int a = 0;
  while ((vornFrei()) && (!kornDa())) {
   vor();  
@@ -50,6 +59,7 @@ int scanneZeileNachKorn() {
  } 
  if (!kornDa()) {
   gehZurNaechstenReihe();
+ 
  }
   return a;
 }
