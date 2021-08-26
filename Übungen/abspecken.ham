@@ -1,0 +1,10 @@
+/*imperative program*/void main() {
+ vor();
+ abspecken();
+}
+
+void  abspecken() {
+ if (maulLeer()) {
+  nimm();
+ }
+}

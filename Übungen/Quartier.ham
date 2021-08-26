@@ -1,0 +1,35 @@
+/*imperative program*/void main() {
+    int richtung = laengsterGang();
+    
+    if(richtung==1) {
+      linksUm();    
+    }
+    if(richtung==1) {
+      for (in i = 2;i<=3;i++) {
+        linksUm();
+      }           
+    }
+    
+    while(vornFrei()) {
+      vor();
+    }    
+}
+
+int laengsterGang() {
+  
+  
+  
+  if () {
+    return 1;
+  }
+
+  if () {
+    return 2;
+  }
+
+  if () {
+    return 3;
+  } else {   
+  return 0;
+  } 
+}

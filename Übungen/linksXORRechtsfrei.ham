@@ -1,0 +1,21 @@
+/*imperative program*/void main() {
+    if (linksOderRechtsFrei()) {
+     linksUm();
+ }    
+}
+
+boolean linksOderRechtsFrei() {
+  linksUm();
+  boolean l = vornFrei();
+  linksUm();
+  linksUm();
+  boolean r = vornFrei(); 
+  linksUm();
+  if (l && !r || r && !l) {
+   schreib("true");
+   return true;   
+  } else {    
+   schreib("false");   
+   return false; 
+ }
+}
