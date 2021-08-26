@@ -1,0 +1,48 @@
+/*imperative program*/int a = 0;
+void main() {
+  if (hintenFrei()) {
+   schreib("Ja, hinten ist frei");
+   } else {
+   schreib("Nein, hinten ist nicht frei"); 
+  }  
+  umdrehen();
+  nFelderFrei();
+  umdrehen();
+  nVor(a);
+  umdrehen();  
+  schreib(a + " Felder vor mir Frei"); 
+  
+}
+
+boolean hintenFrei() {
+  umdrehen();
+  if (vornFrei()) {
+   return true;
+  } else {
+   return false;
+  }
+}
+
+void umdrehen() {
+ linksUm();
+ linksUm();
+ 
+}
+
+int nFelderFrei() {
+ 
+ while (vornFrei()) {
+  vor();
+  a++;
+ }
+ return a;
+
+}
+
+void nVor(int a) {
+ for (int i =1; i<=a;i++) {
+  vor();
+ }
+
+
+}

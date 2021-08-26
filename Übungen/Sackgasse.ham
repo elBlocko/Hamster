@@ -1,0 +1,55 @@
+/*imperative program*/boolean l,r = false;
+void main() {
+   while (vornFrei()) {
+     vor();
+    if (sackgasse() == false) {
+     break;
+    }
+   }  
+   if(sackgasse()) {
+    schreib("SACKGASSE");
+   } else {
+     schreib("keine SACKGASSE!");   
+   }   
+  geheZurueck(); 
+}
+
+// METHODE
+
+boolean sackgasse() {  
+ linksUm();
+ l = vornFrei(); 
+ rechtsUm();
+ rechtsUm();
+ r = vornFrei();
+ linksUm(); 
+ if (l || r == true) {
+  return false; 
+ } else {
+   return true; 
+ } 
+} // eom
+
+
+
+void geheZurueck() {
+   umdrehen();
+   while (vornFrei()) {
+     vor();
+  } 
+  umdrehen();
+}
+
+// Hamster Moves
+
+void rechtsUm(){
+linksUm();
+linksUm();
+linksUm();
+}
+
+void umdrehen() {
+ linksUm();
+ linksUm();
+ 
+}
