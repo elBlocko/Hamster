@@ -23,7 +23,7 @@ public void main() {
   
   }
  
-  schreib("y-Differenz ist: " + yDiff + "\n x- Differenz ist: " + xDiff); 
+  schreib("y-Differenz ist: " + yDiff + "\n x- Differenz ist:  " + xDiff); 
   
 }
 
