@@ -1,0 +1,11 @@
+/*imperative program*/void main() {
+   int x=1;
+   String inhalt = "";
+   int[] harry = new int[100];
+   for (int i=0;i<harry.length;i++) {   
+   harry[i] = x;  
+   inhalt += ("\n" + x); 
+    x++;
+   }   
+   schreib(inhalt);
+}

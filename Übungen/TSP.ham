@@ -3,6 +3,10 @@ int x1, x2, x3, x4,x  = 0;
 int y1, y2, y3, y4 = 0;
 int S12,S13,S14,S23,S24,S34= 0;
 int numCorn,c = 0;
+
+  String inhalt = "";
+  int min = Integer.MAX_VALUE;
+  int erg =0;
 void main() {
  // Koordinaten holen
  for (int i = 1; i<=4;i++) {
@@ -10,19 +14,24 @@ void main() {
   getCoordN1();
   }
  // Abstände berechnen
-
  calcS12();
  calcS13();
  calcS14();
  calcS23();
  calcS24();
  calcS34();
+  
+ // pruefe kürzeste Rundreise 
+  pruefe(); 
+ 
    
 // Testausgabe  
  schreib("x1 = " + x1 + "\n y1= " + y1 + "\n x2 = " + x2 + "\n y2= " + y2 +
   "\n x3 = " + x3 + "\n y3= " + y3 + "\n x4 = " + x4 + "\n y4= " + y4); 
  schreib("S12 = " + S12 + "\n S13= " + S13 + "\n S14 = " + S14 + "\n S23= " + S23 +
   "\n S24 = " + S24 + "\n S34= " + S34); 
+  
+  schreib("Die kürzeste Strecke für die Rundreise in alle Städte beträgt " + erg); 
  
 } // eoMain
 
@@ -114,35 +123,47 @@ void getCoordN1() {
     c = countFieldCorn(); 
     allCornBack();     
     }
-   if (c != 0) { 
-    if (c == 1) { 
+   if (c != 0) {
+   	switch(c) {
+   	case 1: { 
     x1 = x +1; 
+    break;
     }
-    if (c == 2) { 
+    case 2: { 
     x2 = x +1;     
+    break;
     }
-    if (c == 3) { 
+    case 3: { 
     x3 = x +1;    
+    break;
     }
-    if (c == 4) { 
+    case 4: { 
     x4 = x +1;    
-    }     
+    break;
+      }   
+     } // eoswitch  
     } // eoif  
   } // eow 
   vor();
- if (c != 0) {     
-  if (c == 1) {
+ if (c != 0) {   
+  switch(c) {  
+  case 1: {
   y1 = yDiff  + 1;
+  break;
   }
-  if (c == 2) {
+  case 2: {
   y2 = yDiff  + 1; 
+  break;
   }
-  if (c == 3) {
+  case 3: {
   y3 = yDiff  + 1;
+  break;
   }
-  if (c == 4) {
+  case 4:  {
   y4 = yDiff  + 1;
+  break;
   }
+   } // eoswitch
   } // eoif 
  c = 0; 
 }
@@ -175,6 +196,54 @@ void allCornBack() {
   while (!maulLeer()) {
    gib();
   }
+}
+
+/*
+Es gibt 6 Strecken, jede Stadt wir aber nur einmal besucht, es gibt also nur 3
+Wege die addiert werden müssen
+Ausgehend von Stadt 1, unabhängig ob das der ausgangsort der tatsächlichen Reise ist wird
+der kürzeste Weg berechnet
+
+Dazu werden alle 3 Varianten von Stadt eins in eine andere Stadt zu reisen auf den kürzesten
+Weg geprüft
+
+daraus ergeben sich nur 3 Möglichkeiten zum Ergebnis zu kommen
+
+*/
+void pruefe() {  // FALSCHE ANNAHME!!!
+   int[] strecken = { S12,S13,S14,S23,S24,S34 };
+  for (int i=0;i<=2;i++) {  
+   if (strecken[i] < min)
+		min = strecken[i]; 
+   inhalt += ("\n" + strecken[i] );    
+   }   
+   schreib("" + min);   
+  
+ if(min == strecken[0]) {
+   schreib("Zuerst nach 2");  
+   if (strecken[3] < strecken[4]) {
+     erg = strecken[0] +  strecken[3] +  strecken[5];    
+   } else {
+    erg = strecken[0] +  strecken[4] +  strecken[5];       
+   }   
+ }   
+ if(min == strecken[1]) {
+  schreib("Zuerst nach 3");  
+  if (strecken[3] < strecken[5]) {
+     erg = strecken[1] +  strecken[3] +  strecken[4];    
+   } else {
+    erg = strecken[1] +  strecken[5] +  strecken[4];       
+   }
+ }  
+ if(min == strecken[2]) {
+  schreib("Zuerst nach 4");  
+  if (strecken[4] < strecken[5]) {
+     erg = strecken[2] +  strecken[4] +  strecken[3];    
+   } else {
+    erg = strecken[2] +  strecken[5] +  strecken[3];       
+   }
+ }  
+
 }
 
 // Hamstermoves -----------------------------------------------------------

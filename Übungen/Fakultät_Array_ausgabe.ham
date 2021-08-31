@@ -1,0 +1,25 @@
+/*imperative program*/import java.util.ArrayList;
+int n = 0;
+String inhalt = "";
+  
+void main() {
+  
+  // Eingabe Zahl n stellen  
+  n = liesZahl("Bitte gib die Zahl an Elementen ein");
+  
+  // erzeuge Liste mit Elementen von 1 bis n   
+   ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+   for (int i=1;i<=n;i++) {   
+    myNumbers.add(i);
+   inhalt += ("\n" + i); 
+ } 
+  // erzeuge Liste mit n! Möglichen Anordnungen der Elemente
+ 
+   
+  // gebe die Liste aus 
+  // Array Liste beginnt bei 1!  
+  schreib("" + inhalt.charAt(1));
+   
+ 
+}
+
